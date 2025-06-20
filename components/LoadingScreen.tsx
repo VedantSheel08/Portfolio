@@ -83,8 +83,7 @@ export default function LoadingScreen() {
 
             {/* Name Animation */}
             <motion.h1
-              className="text-4xl md:text-6xl font-bold mb-4"
-              style={{ fontFamily: "Orbitron, monospace" }}
+              className="text-4xl md:text-6xl font-bold mb-4 font-apple-heading"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
