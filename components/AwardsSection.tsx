@@ -20,7 +20,7 @@ const awards = [
     name: "CWSF Silver Medalist",
     year: "2022 & 2023",
     icon: FaMedal,
-    color: "from-silver-300 to-gray-500",
+    color: "from-gray-300 to-gray-500",
     description:
       "Canada's top national science fair. Awarded silver twice for innovations in machine learning and sustainability.",
     category: "National Recognition",
@@ -40,7 +40,7 @@ const awards = [
     name: "Best of Fair – BRSTF",
     year: "2023",
     icon: FaTrophy,
-    color: "from-gold-400 to-yellow-600",
+    color: "from-yellow-400 to-yellow-600",
     description:
       "Selected top project across the entire fair for impact and creativity.",
     category: "Fair Excellence",
@@ -128,7 +128,7 @@ const awards = [
     name: "Public Speaking Gold Medalist",
     year: "2023",
     icon: FaMicrophone,
-    color: "from-yellow-400 to-gold-600",
+    color: "from-yellow-400 to-amber-600",
     description:
       "District #3 and Northport Finals — awarded for persuasive delivery and clarity.",
     category: "Communication",
