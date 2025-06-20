@@ -127,12 +127,23 @@ export default function LoadingScreen() {
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
                   initial={{
-                    x: Math.random() * window.innerWidth,
-                    y: window.innerHeight + 50,
+                    x:
+                      Math.random() *
+                      (typeof window !== "undefined"
+                        ? window.innerWidth
+                        : 1200),
+                    y:
+                      (typeof window !== "undefined"
+                        ? window.innerHeight
+                        : 800) + 50,
                   }}
                   animate={{
                     y: -50,
-                    x: Math.random() * window.innerWidth,
+                    x:
+                      Math.random() *
+                      (typeof window !== "undefined"
+                        ? window.innerWidth
+                        : 1200),
                   }}
                   transition={{
                     duration: Math.random() * 3 + 2,
