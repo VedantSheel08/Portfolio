@@ -248,7 +248,10 @@ export default function Navigation() {
           <motion.div
             className="absolute inset-1 border-2 border-cyan-400 rounded-full"
             style={{
-              background: `conic-gradient(from 0deg, #00FFFF ${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 360}deg, transparent 0deg)`,
+              background:
+                typeof window !== "undefined"
+                  ? `conic-gradient(from 0deg, #00FFFF ${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 360}deg, transparent 0deg)`
+                  : "conic-gradient(from 0deg, #00FFFF 0deg, transparent 0deg)",
             }}
           />
           <div className="absolute inset-2 bg-black rounded-full flex items-center justify-center">
