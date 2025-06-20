@@ -1,15 +1,8 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import {
-  FaBriefcase,
-  FaGraduationCap,
-  FaUsers,
-  FaCode,
-  FaChess,
-  FaVolleyballBall,
-} from "react-icons/fa";
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { FaBriefcase, FaGraduationCap, FaUsers, FaCode, FaChess, FaVolleyballBall } from 'react-icons/fa'
 
 const experiences = [
   {
@@ -23,17 +16,10 @@ const experiences = [
       "Engineered a state-of-the-art multi machine learning model for conducting prognosis prediction of pulmonary fibrosis with improved error rate of ± 47mL (human lung holds an approximate 6000mL)",
       "Implemented novel techniques for lung volume quantification, including watershed algorithms from CT scans",
       "Developed a Self-attention CNN model to classify fibrotic tissue patterns and improve prognosis accuracy",
-      "Conducting research and testing on in-clinic data under Prof. Dr. Martin Kolb and Prof. Sarah Svenningson",
+      "Conducting research and testing on in-clinic data under Prof. Dr. Martin Kolb and Prof. Sarah Svenningson"
     ],
-    tags: [
-      "Machine Learning",
-      "Medical AI",
-      "CNN",
-      "Self-attention",
-      "CT Scans",
-      "Research",
-    ],
-    color: "from-red-400 to-orange-600",
+    tags: ["Machine Learning", "Medical AI", "CNN", "Self-attention", "CT Scans", "Research"],
+    color: "from-red-400 to-orange-600"
   },
   {
     id: 2,
@@ -45,16 +31,10 @@ const experiences = [
     description: [
       "Enhanced the company's internal chatbot system, improving response accuracy and user engagement by 35%, resulting in faster client communication and support resolution times",
       "Developed automation scripts to streamline manual workflows, including emergency ticket information retrieval from clients, reducing response time by 43%",
-      "Improved team productivity by over 20% through optimizing communication tools and internal systems",
+      "Improved team productivity by over 20% through optimizing communication tools and internal systems"
     ],
-    tags: [
-      "Python",
-      "Automation",
-      "Chatbots",
-      "Workflow Optimization",
-      "Team Productivity",
-    ],
-    color: "from-cyan-400 to-blue-600",
+    tags: ["Python", "Automation", "Chatbots", "Workflow Optimization", "Team Productivity"],
+    color: "from-cyan-400 to-blue-600"
   },
   {
     id: 3,
@@ -66,16 +46,10 @@ const experiences = [
     description: [
       "Mentored by Prof. Otman Basir and PhD student Daniel Zadeh on Machine Learning and neural network design",
       "Gained hands-on experience in model development, optimization and deployment for real-time computer vision",
-      "Engineered a real-time ASL-to-text-to-voice translator with 98.4% accuracy using Machine Learning",
+      "Engineered a real-time ASL-to-text-to-voice translator with 98.4% accuracy using Machine Learning"
     ],
-    tags: [
-      "Machine Learning",
-      "Computer Vision",
-      "ASL Translation",
-      "Neural Networks",
-      "Real-time Processing",
-    ],
-    color: "from-green-400 to-teal-600",
+    tags: ["Machine Learning", "Computer Vision", "ASL Translation", "Neural Networks", "Real-time Processing"],
+    color: "from-green-400 to-teal-600"
   },
   {
     id: 4,
@@ -86,29 +60,15 @@ const experiences = [
     icon: FaUsers,
     description: [
       "Dedicated over 200 hours tutoring and supporting students in developing core math and reading skills",
-      "Assisted instructors with grading, marking, and maintaining accurate student progress records",
+      "Assisted instructors with grading, marking, and maintaining accurate student progress records"
     ],
-    tags: [
-      "Education",
-      "Mentorship",
-      "Tutoring",
-      "Student Development",
-      "200+ Hours",
-    ],
-    color: "from-purple-400 to-pink-600",
-  },
-];
+    tags: ["Education", "Mentorship", "Tutoring", "Student Development", "200+ Hours"],
+    color: "from-purple-400 to-pink-600"
+  }
+]
 
-const ExperienceCard = ({
-  experience,
-  index,
-  inView,
-}: {
-  experience: any;
-  index: number;
-  inView: boolean;
-}) => {
-  const Icon = experience.icon;
+const ExperienceCard = ({ experience, index, inView }: { experience: any; index: number; inView: boolean }) => {
+  const Icon = experience.icon
 
   return (
     <motion.div
@@ -124,7 +84,7 @@ const ExperienceCard = ({
           animate={inView ? { scaleY: 1 } : {}}
           transition={{ duration: 1, delay: index * 0.2 + 0.5 }}
           className="absolute left-8 top-20 w-0.5 h-32 bg-gradient-to-b from-cyan-400 to-transparent z-0"
-          style={{ transformOrigin: "top" }}
+          style={{ transformOrigin: 'top' }}
         />
       )}
 
@@ -136,9 +96,7 @@ const ExperienceCard = ({
           transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
           className="relative z-10"
         >
-          <div
-            className={`w-16 h-16 rounded-full bg-gradient-to-br ${experience.color} flex items-center justify-center shadow-lg`}
-          >
+          <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${experience.color} flex items-center justify-center shadow-lg`}>
             <Icon className="text-white text-xl" />
           </div>
           <motion.div
@@ -152,44 +110,31 @@ const ExperienceCard = ({
         <motion.div
           whileHover={{
             scale: 1.02,
-            boxShadow: "0 20px 40px rgba(0, 255, 255, 0.15)",
+            boxShadow: "0 20px 40px rgba(0, 255, 255, 0.15)"
           }}
           className="flex-1 bg-gray-900/50 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-500 group"
         >
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
             <div>
-              <h3
-                className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-1"
-                className="font-apple-body"
-              >
-                {experience.role}
-              </h3>
-              <h4
-                className="text-lg text-cyan-400 mb-2"
-                style={{
-                  fontFamily:
-                    "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-                }}
-              >
-                {experience.company}
-              </h4>
-            </div>
-            <div className="text-right">
               <p
+                className="text-gray-300 text-sm mb-1 font-apple-body"
+              >
+                {experience.period}
+              </p>
+              <p
+                className="text-gray-400 text-sm font-apple-body"
+              >
+              <h3
+                className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-1 font-apple-heading"
+              >
                 className="text-gray-300 text-sm mb-1"
-                style={{
-                  fontFamily:
-                    "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-                }}
+                style={{ fontFamily: '-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif' }}
               >
                 {experience.period}
               </p>
               <p
                 className="text-gray-400 text-sm"
-                style={{
-                  fontFamily:
-                    "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-                }}
+                style={{ fontFamily: '-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif' }}
               >
                 📍 {experience.location}
               </p>
@@ -203,11 +148,7 @@ const ExperienceCard = ({
                 initial={{ opacity: 0, x: -20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: index * 0.2 + 0.5 + i * 0.1 }}
-                className="flex items-start text-gray-300"
-                style={{
-                  fontFamily:
-                    "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-                }}
+                className="flex items-start text-gray-300 font-apple-body"
               >
                 <span className="text-cyan-400 mr-3 mt-1">•</span>
                 {item}
@@ -223,11 +164,7 @@ const ExperienceCard = ({
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: index * 0.2 + 0.7 + i * 0.05 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium hover:bg-cyan-400/20 transition-colors cursor-default"
-                style={{
-                  fontFamily:
-                    "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-                }}
+                className="bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium hover:bg-cyan-400/20 transition-colors cursor-default font-apple-body"
               >
                 {tag}
               </motion.span>
@@ -236,21 +173,17 @@ const ExperienceCard = ({
         </motion.div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
 export default function ExperienceSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.2,
-  });
+    threshold: 0.2
+  })
 
   return (
-    <section
-      ref={ref}
-      id="experience"
-      className="min-h-screen bg-black py-20 px-6 relative"
-    >
+    <section ref={ref} id="experience" className="min-h-screen bg-black py-20 px-6 relative">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -273,14 +206,9 @@ export default function ExperienceSection() {
           />
 
           <p
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-            style={{
-              fontFamily:
-                "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-            }}
+            className="text-xl text-gray-300 max-w-3xl mx-auto font-apple-body"
           >
-            From software development to education and leadership, here's my
-            journey building skills and making impact.
+            From software development to education and leadership, here's my journey building skills and making impact.
           </p>
         </motion.div>
 
@@ -303,27 +231,18 @@ export default function ExperienceSection() {
         >
           <div className="inline-block bg-gradient-to-r from-cyan-400 to-blue-600 rounded-2xl p-8">
             <h3
-              className="text-3xl font-bold text-black mb-4"
-              style={{
-                fontFamily:
-                  "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-              }}
+              className="text-3xl font-bold text-black mb-4 font-apple-heading"
             >
               Ready for New Challenges
             </h3>
             <p
-              className="text-black text-lg"
-              style={{
-                fontFamily:
-                  "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-              }}
+              className="text-black text-lg font-apple-body"
             >
-              Always seeking opportunities to apply AI and technology to solve
-              real-world problems and create meaningful impact.
+              Always seeking opportunities to apply AI and technology to solve real-world problems and create meaningful impact.
             </p>
           </div>
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
