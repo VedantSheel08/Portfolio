@@ -47,10 +47,11 @@ export const projects = [
       "Collaborated with McMaster University researchers",
     ],
     category: "Medical AI",
+    image: "/api/project-image/pulmonary-fibrosis",
   },
   {
     id: 2,
-    name: "ECOSCAN Wildlife Rover",
+    name: "ECOSCAN - Environmental Conservation and Observation System for Coordinated Outdoor Unmanned Tracking",
     tech: ["YOLOv8", "Arduino", "Computer Vision", "IoT"],
     description: [
       "Autonomous rover for wildlife conservation monitoring",
@@ -58,6 +59,7 @@ export const projects = [
       "Solar-powered with 24/7 operation capability",
     ],
     category: "Conservation Tech",
+    image: "/api/project-image/ecoscan",
   },
   {
     id: 3,
@@ -69,6 +71,7 @@ export const projects = [
       "Text-to-speech integration for accessibility",
     ],
     category: "Accessibility",
+    image: "/api/project-image/asl-translator",
   },
   {
     id: 4,
@@ -80,6 +83,7 @@ export const projects = [
       "Mobile-friendly web application",
     ],
     category: "Sustainability",
+    image: "/api/project-image/waste-wise",
   },
   {
     id: 5,
@@ -91,6 +95,7 @@ export const projects = [
       "Smart matching algorithm with 92% accuracy",
     ],
     category: "Social Impact",
+    image: "/api/project-image/lost-found",
   },
   {
     id: 6,
@@ -102,6 +107,7 @@ export const projects = [
       "Weather-adaptive tracking algorithm",
     ],
     category: "Clean Energy",
+    image: "/api/project-image/solar-tracker",
   },
 ];
 
