@@ -10,14 +10,13 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="/VedantResume.pdf"
-            download
+            href="/api/resume"
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           >
             Download Resume
           </a>
           <a
-            href="/vedant_headshot.jpg"
+            href="/api/photo"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
