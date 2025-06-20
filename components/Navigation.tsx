@@ -10,11 +10,15 @@ import {
   FaEnvelope,
   FaBars,
   FaTimes,
+  FaLinkedin,
+  FaPhone,
+  FaBriefcase,
 } from "react-icons/fa";
 
 const navItems = [
   { id: "hero", icon: FaHome, label: "Home" },
   { id: "about", icon: FaUser, label: "About" },
+  { id: "experience", icon: FaBriefcase, label: "Experience" },
   { id: "projects", icon: FaProjectDiagram, label: "Projects" },
   { id: "awards", icon: FaTrophy, label: "Awards" },
   { id: "contact", icon: FaEnvelope, label: "Contact" },
@@ -61,6 +65,72 @@ export default function Navigation() {
 
   return (
     <>
+      {/* Top Left Header */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="fixed top-6 left-6 z-50"
+      >
+        <div className="flex flex-col">
+          <h1
+            className="text-xl font-bold text-white"
+            style={{
+              fontFamily:
+                "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
+            }}
+          >
+            Vedant Sheel
+          </h1>
+          <p
+            className="text-sm text-cyan-400 mb-3"
+            style={{
+              fontFamily:
+                "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
+            }}
+          >
+            Building Tech With Purpose.
+          </p>
+          <div className="flex gap-3">
+            <motion.a
+              href="https://linkedin.com/in/vedantsheel"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0 0 15px rgba(0, 255, 255, 0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="w-8 h-8 bg-black/80 backdrop-blur-sm border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300"
+            >
+              <FaLinkedin size={14} />
+            </motion.a>
+            <motion.a
+              href="mailto:v3dant.sheel456@gmail.com"
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0 0 15px rgba(0, 255, 255, 0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="w-8 h-8 bg-black/80 backdrop-blur-sm border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300"
+            >
+              <FaEnvelope size={14} />
+            </motion.a>
+            <motion.a
+              href="tel:+12262001974"
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0 0 15px rgba(0, 255, 255, 0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="w-8 h-8 bg-black/80 backdrop-blur-sm border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300"
+            >
+              <FaPhone size={14} />
+            </motion.a>
+          </div>
+        </div>
+      </motion.div>
+
       {/* Desktop Navigation */}
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
