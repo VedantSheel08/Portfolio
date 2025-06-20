@@ -6,6 +6,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AwardsSection from "@/components/AwardsSection";
 import ContactSection from "@/components/ContactSection";
@@ -32,6 +33,11 @@ export default function Home() {
         case "a":
           document
             .getElementById("about")
+            ?.scrollIntoView({ behavior: "smooth" });
+          break;
+        case "e":
+          document
+            .getElementById("experience")
             ?.scrollIntoView({ behavior: "smooth" });
           break;
         case "p":
@@ -96,6 +102,17 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <AboutSection />
+      </motion.div>
+
+      {/* Experience Section */}
+      <motion.div
+        id="experience"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <ExperienceSection />
       </motion.div>
 
       {/* Projects Section */}
@@ -194,6 +211,9 @@ export default function Home() {
             </p>
             <p>
               <kbd className="bg-gray-800 px-1 rounded">A</kbd> About
+            </p>
+            <p>
+              <kbd className="bg-gray-800 px-1 rounded">E</kbd> Experience
             </p>
             <p>
               <kbd className="bg-gray-800 px-1 rounded">P</kbd> Projects
