@@ -256,12 +256,14 @@ export default function Navigation() {
           />
           <div className="absolute inset-2 bg-black rounded-full flex items-center justify-center">
             <span className="text-cyan-400 text-xs font-bold">
-              {Math.round(
-                (window.scrollY /
-                  (document.documentElement.scrollHeight -
-                    window.innerHeight)) *
-                  100,
-              )}
+              {typeof window !== "undefined"
+                ? Math.round(
+                    (window.scrollY /
+                      (document.documentElement.scrollHeight -
+                        window.innerHeight)) *
+                      100,
+                  )
+                : 0}
               %
             </span>
           </div>
