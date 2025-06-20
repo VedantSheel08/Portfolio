@@ -140,8 +140,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-6xl md:text-8xl font-bold mb-4 font-mono"
-          style={{ fontFamily: "Orbitron, monospace" }}
+          className="text-6xl md:text-8xl font-bold mb-4 font-apple-heading"
         >
           <span className="text-white">Vedant</span>{" "}
           <span className="text-cyan-400">Sheel</span>
@@ -153,8 +152,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="text-2xl md:text-4xl font-semibold text-cyan-400"
-            style={{ fontFamily: "Orbitron, monospace" }}
+            className="text-2xl md:text-4xl font-semibold text-cyan-400 font-apple-heading"
           >
             {displayedText}
             {isTyping && (
