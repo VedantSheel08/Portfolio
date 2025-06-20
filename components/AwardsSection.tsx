@@ -200,13 +200,7 @@ const AwardModal = ({
             transition={{ delay: 0.3 }}
             className="text-center"
           >
-            <h2
-              className="text-2xl font-bold text-white mb-2"
-              style={{
-                fontFamily:
-                  "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-              }}
-            >
+            <h2 className="text-2xl font-bold text-white mb-2 font-apple-heading">
               {award.name}
             </h2>
             <p
@@ -241,10 +235,7 @@ const AwardModal = ({
             whileTap={{ scale: 0.98 }}
             onClick={onClose}
             className="w-full mt-6 bg-gradient-to-r from-cyan-400 to-blue-600 text-black font-bold py-3 rounded-xl transition-all duration-300 hover:from-cyan-300 hover:to-blue-500"
-            style={{
-              fontFamily:
-                "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-            }}
+            className="font-apple-body"
           >
             Return to Awards
           </motion.button>
@@ -372,13 +363,7 @@ export default function AwardsSection() {
           transition={{ duration: 1 }}
           className="text-center mb-16"
         >
-          <motion.h2
-            className="text-5xl md:text-7xl font-bold text-white mb-4"
-            style={{
-              fontFamily:
-                "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-            }}
-          >
+          <motion.h2 className="text-5xl md:text-7xl font-bold text-white mb-4 font-apple-heading">
             Awards & <span className="text-cyan-400">Recognition</span>
           </motion.h2>
 
