@@ -58,7 +58,7 @@ const experiences = [
   },
   {
     id: 3,
-    role: "Research Intern",
+    role: "ML Research Intern",
     company: "University of Waterloo",
     period: "March 2023 – June 2023",
     location: "Waterloo, ON",
