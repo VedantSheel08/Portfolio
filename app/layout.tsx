@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Orbitron, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const orbitron = Orbitron({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-orbitron",
-  display: "swap",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -47,10 +41,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${sora.variable}`}>
+    <html lang="en" className={`${inter.variable}`}>
       <body
-        className={`${sora.className} antialiased`}
+        className={`${inter.className} antialiased`}
         suppressHydrationWarning
+        style={{
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Helvetica Neue", Helvetica, Arial, sans-serif',
+        }}
       >
         {children}
       </body>
