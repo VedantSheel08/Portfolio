@@ -29,11 +29,16 @@ const ProjectCard = ({
       onClick={onClick}
     >
       <div className="relative overflow-hidden rounded-lg mb-4 h-48 bg-gradient-to-br from-gray-800 to-gray-900">
+        <img
+          src={project.image}
+          alt={project.name}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <motion.div
             whileHover={{ scale: 1.1, rotate: 180 }}
-            className="w-16 h-16 border-2 border-cyan-400 rounded-full flex items-center justify-center"
+            className="w-16 h-16 border-2 border-cyan-400 rounded-full flex items-center justify-center bg-black/50 backdrop-blur-sm"
           >
             <FaExternalLinkAlt className="text-cyan-400 text-xl" />
           </motion.div>
@@ -98,10 +103,7 @@ const ProjectModal = ({
       >
         <div className="flex justify-between items-start mb-6">
           <div>
-            <h2
-              className="text-3xl font-bold text-white mb-2"
-              style={{ fontFamily: "Orbitron, monospace" }}
-            >
+            <h2 className="text-3xl font-bold text-white mb-2 font-apple-heading">
               {project.name}
             </h2>
             <span className="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
@@ -195,10 +197,7 @@ export default function ProjectsSection() {
           transition={{ duration: 1 }}
           className="text-center mb-16"
         >
-          <motion.h2
-            className="text-5xl md:text-7xl font-bold text-white mb-4"
-            style={{ fontFamily: "Orbitron, monospace" }}
-          >
+          <motion.h2 className="text-5xl md:text-7xl font-bold text-white mb-4 font-apple-heading">
             Featured <span className="text-cyan-400">Projects</span>
           </motion.h2>
 
