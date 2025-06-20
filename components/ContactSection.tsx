@@ -87,10 +87,7 @@ export default function ContactSection() {
           transition={{ duration: 1 }}
           className="text-center mb-16"
         >
-          <motion.h2
-            className="text-5xl md:text-7xl font-bold text-white mb-4"
-            style={{ fontFamily: "Orbitron, monospace" }}
-          >
+          <motion.h2 className="text-5xl md:text-7xl font-bold text-white mb-4 font-apple-heading">
             Let's <span className="text-cyan-400">Connect</span>
           </motion.h2>
 
@@ -115,10 +112,7 @@ export default function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3
-                className="text-3xl font-bold text-cyan-400 mb-6"
-                style={{ fontFamily: "Orbitron, monospace" }}
-              >
+              <h3 className="text-3xl font-bold text-cyan-400 mb-6 font-apple-heading">
                 Get in Touch
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
