@@ -160,10 +160,7 @@ const ExperienceCard = ({
             <div>
               <h3
                 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-1"
-                style={{
-                  fontFamily:
-                    "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-                }}
+                className="font-apple-body"
               >
                 {experience.role}
               </h3>
@@ -263,10 +260,7 @@ export default function ExperienceSection() {
         >
           <motion.h2
             className="text-5xl md:text-7xl font-bold text-white mb-4"
-            style={{
-              fontFamily:
-                "-apple-system, SF Pro Display, Inter, Helvetica Neue, sans-serif",
-            }}
+            className="font-apple-heading"
           >
             My <span className="text-cyan-400">Experience</span>
           </motion.h2>
