@@ -84,8 +84,7 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-5xl md:text-7xl font-bold text-white mb-4"
-            style={{ fontFamily: "Orbitron, monospace" }}
+            className="text-5xl md:text-7xl font-bold text-white mb-4 font-apple-heading"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 1, delay: 0.3 }}
@@ -144,10 +143,7 @@ export default function AboutSection() {
             transition={{ duration: 1, delay: 0.8 }}
             className="relative"
           >
-            <h3
-              className="text-3xl font-bold text-cyan-400 mb-8 text-center"
-              style={{ fontFamily: "Orbitron, monospace" }}
-            >
+            <h3 className="text-3xl font-bold text-cyan-400 mb-8 text-center font-apple-heading">
               Tech Arsenal
             </h3>
 
