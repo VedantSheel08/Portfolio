@@ -234,8 +234,8 @@ const AwardModal = ({
             }}
             whileTap={{ scale: 0.98 }}
             onClick={onClose}
-            className="w-full mt-6 bg-gradient-to-r from-cyan-400 to-blue-600 text-black font-bold py-3 rounded-xl transition-all duration-300 hover:from-cyan-300 hover:to-blue-500"
-            className="font-apple-body"
+            className="w-full mt-6 bg-gradient-to-r from-cyan-400 to-blue-600 text-black font-bold py-3 rounded-xl transition-all duration-300 hover:from-cyan-300 hover:to-blue-500 font-apple-body"
+
           >
             Return to Awards
           </motion.button>
