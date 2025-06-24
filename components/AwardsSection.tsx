@@ -397,7 +397,7 @@ export default function AwardsSection() {
               key={award.id}
               award={award}
               index={index}
-              onClick={() => setSelectedAward(award)}
+              onClick={() => setSelectedAward(award.id)}
               inView={inView}
             />
           ))}
